@@ -202,6 +202,5 @@ class Position(object):
 
         self.upopened = opened
         self.upclosed = closed
-        print('*'*50)
 
         return self.size, self.price, opened, closed
