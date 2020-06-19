@@ -162,7 +162,7 @@ class Position(object):
 
         self.price_orig = self.price
         oldsize = self.size
-        self.size += size
+        self.size = round(self.size + size, 8)
 
         if not self.size:
             # Update closed existing position
@@ -202,5 +202,6 @@ class Position(object):
 
         self.upopened = opened
         self.upclosed = closed
+        print('*'*50)
 
-        return round(self.size, 8), self.price, opened, closed
+        return self.size, self.price, opened, closed
