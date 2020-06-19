@@ -203,4 +203,4 @@ class Position(object):
         self.upopened = opened
         self.upclosed = closed
 
-        return self.size, self.price, opened, closed
+        return round(self.size, 8), self.price, opened, closed
