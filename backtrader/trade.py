@@ -249,7 +249,7 @@ class Trade(object):
 
         # Update size and keep a reference for logic an calculations
         oldsize = self.size
-        self.size += size  # size will carry the opposite sign if reducing
+        self.size = round(self.size + size, 8)  # size will carry the opposite sign if reducing
 
         # Check if it has been currently opened
         self.justopened = bool(not oldsize and size)
